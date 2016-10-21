@@ -1,3 +1,5 @@
+'use strict'
+
 var assert = require('assert')
 var hostsUtil = require('./')
 
@@ -57,6 +59,31 @@ describe('parse', function () {
         '// ==/UserScript==\n\n'
       ].join('')),
       json
+    )
+  })
+
+  it('should handle multi space', function () {
+    assert.deepEqual(
+      parse([
+        '  //  ==UserScript==  \n',
+        '  //  @name     test  \n',
+        '  //  @version  0.1  \n',
+        '  //  ==/UserScript==  \n'
+      ].join('')),
+      json
+    )
+  })
+
+  it('should handle space in field', function () {
+    assert.deepEqual(
+      parse([
+        '// ==UserScript==\n',
+        '// @name one two three\n',
+        '// ==/UserScript==\n'
+      ].join('')),
+      {
+        name: 'one two three'
+      }
     )
   })
 
