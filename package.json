@@ -1,11 +1,14 @@
 {
   "name": "userscript-meta",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Parse and stringify Userscript metadata.",
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover _mocha"
   },
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pd4d10/userscript-meta.git"
