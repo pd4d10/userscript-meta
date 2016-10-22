@@ -13,7 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/pd4d10/userscript-meta.git"
   },
-  "keywords": [],
+  "keywords": [
+    "userscript",
+    "metadata",
+    "parse",
+    "stringify"
+  ],
   "author": "pd4d10 <pd4d10@gmail.com>",
   "license": "MIT",
   "bugs": {
